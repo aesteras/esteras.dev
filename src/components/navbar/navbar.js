@@ -7,24 +7,28 @@ const Toggle = styled.div`
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
+  
   @media (min-width: 50em) {
     display: none;
-  }
+}
 `
 
 const Navbox = styled.div`
   width: 100%;
+  height: 100%;
   background-color: white;
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   position: fixed;
   top: 5rem;
   left: ${props => (props.open ? "0" : "-100%")};
   transition: all .1s linear;
+  
   @media (min-width: 50em) {
+    justify-content: flex-end;
     flex-flow: row nowrap;
     position: inherit;
   }
@@ -38,7 +42,7 @@ const Hamburger = styled.div`
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
-
+  
   ::before,
   ::after {
     width: 1.5rem;
@@ -48,12 +52,12 @@ const Hamburger = styled.div`
     position: absolute;
     transition: all .1s linear;
   }
-
+  
   ::before {
     transform: ${props => props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
-
+  
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
