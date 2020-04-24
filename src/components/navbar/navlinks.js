@@ -8,7 +8,7 @@ const NavLinks = () => {
     <>
       <CustLink to="/">Home</CustLink>
       <CustLink to="/about/">About</CustLink>
-      <CustLink to="/contact/">Contact</CustLink>
+      <CustLink to="/projects/">Projects</CustLink>
     </>
   )
 }

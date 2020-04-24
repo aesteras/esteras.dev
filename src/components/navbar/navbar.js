@@ -26,6 +26,7 @@ const Navbox = styled.div`
   top: 5rem;
   left: ${props => (props.open ? "0" : "-100%")};
   transition: all .1s linear;
+  z-index: 99;
   
   @media (min-width: 50em) {
     justify-content: flex-end;
@@ -65,11 +66,23 @@ const Hamburger = styled.div`
   }
 `
 
+const Bar = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  z-index: 999;
+  
+  @media (min-width: 50em) {
+    margin-bottom: 0;
+  }
+`
+
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <div style={{ display: `flex`, flexFlow: `row`, justifyContent: `space-between`, marginBottom: `2rem` }}>
+    <Bar>
       <Logo style={{ justifyContent: `flex-start`, marginBottom: `2rem` }}/>
       <Toggle style={{ justifyContent: `center`, alignItems: `center` }} navbarOpen={navbarOpen}
               onClick={() => setNavbarOpen(!navbarOpen)}>
@@ -84,7 +97,7 @@ const Navbar = () => {
           <NavLinks/>
         </Navbox>
       )}
-    </div>
+    </Bar>
   )
 }
 
