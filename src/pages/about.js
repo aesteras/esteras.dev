@@ -71,7 +71,6 @@ export default ({ data }) => (
   </Layout>
 )
 
-
 export const query = graphql`
   query {
     barcelona: file(relativePath: { eq: "photo-barcelona.jpg" }) {

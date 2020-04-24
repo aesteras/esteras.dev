@@ -83,7 +83,7 @@ export default ({ data }) => (
           </FeatureImg>
           <FeatureTxt>
             <h5>Web Cryptography API</h5>
-            <p>Client-side in-browser cryptography project. <Link to="/crypto/">You can try it here</Link>.</p>
+            <p>Client-side in-browser cryptography project. <Link to={"/crypto/"}>You can try it here</Link>.</p>
           </FeatureTxt>
         </Feature>
         <FeatureItem

@@ -1,5 +1,6 @@
 import React from "react"
 import Navbar from "./navbar/navbar"
+import SEO from "./SEO"
 
 const FooterP = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const FooterP = ({ children }) => {
 
 export default ({ children }) => (
   <div style={{ maxWidth: `48rem`, margin: `2rem auto`, padding: `0 1rem` }}>
+    <SEO title={"esteras.dev"} description={"Personal website of Andreu Esteras."}/>
     <Navbar/>
     {children}
     <div style={{ marginTop: `4rem` }}>
