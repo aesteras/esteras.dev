@@ -9,7 +9,7 @@ const UTF8 = {
 
 const encrypt = () => {
   let workerEncrypt = new Worker("/worker-encrypt.js");
-  const dataObject = {
+  let dataObject = {
     decryptedMessage: UTF8.encode(document.getElementById("decrypted").value),
     passwordAsBytes: UTF8.encode(prompt("Enter your password:"))
   };
@@ -22,7 +22,7 @@ const encrypt = () => {
 
 const decrypt = () => {
   let workerDecrypt = new Worker("/worker-decrypt.js");
-  const dataObject = {
+  let dataObject = {
     encryptedMessage: UTF8.encode(document.getElementById("encrypted").value),
     passwordAsBytes: UTF8.encode(prompt("Enter your password:"))
   };
@@ -43,7 +43,7 @@ const TextField = styled.textarea`
   margin: 1rem 0;
 `
 
-export default ({ data }) => (
+export default () => (
   <Layout>
     <h1 style={{ textAlign: `center` }}>Web Cryptography API Demo</h1>
     <p>Here you can try my implementation of client-side in-browser encryption using only the Web Cryptography API along
