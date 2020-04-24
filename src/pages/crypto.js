@@ -41,6 +41,7 @@ const TextField = styled.textarea`
   border-radius: 5px;
   padding: 5px;
   margin: 1rem 0;
+  font-family: 'Courier New', Courier, monospace;
 `
 
 export default () => (
