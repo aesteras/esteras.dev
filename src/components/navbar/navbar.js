@@ -23,7 +23,7 @@ const Navbox = styled.div`
   justify-content: flex-start;
   align-items: center;
   position: fixed;
-  top: 5rem;
+  top: 3rem;
   left: ${props => (props.open ? "0" : "-100%")};
   transition: all .1s linear;
   z-index: 99;
@@ -37,8 +37,8 @@ const Navbox = styled.div`
 
 const Hamburger = styled.div`
   background-color: #111;
-  width: 1.5rem;
-  height: .15rem;
+  width: 1rem;
+  height: .1rem;
   transition: all .1s linear;
   align-self: center;
   position: relative;
@@ -46,8 +46,8 @@ const Hamburger = styled.div`
   
   ::before,
   ::after {
-    width: 1.5rem;
-    height: .15rem;
+    width: 1rem;
+    height: .1rem;
     background-color: #111;
     content: "";
     position: absolute;
@@ -55,14 +55,14 @@ const Hamburger = styled.div`
   }
   
   ::before {
-    transform: ${props => props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
-    top: -10px;
+    transform: ${props => props.open ? "rotate(-90deg) translate(-.4rem, 0)" : "rotate(0deg)"};
+    top: -.4rem;
   }
   
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
     transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
-    top: 10px;
+    top: .4rem;
   }
 `
 
@@ -70,7 +70,7 @@ const Bar = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   z-index: 999;
   
   @media (min-width: 50em) {
@@ -83,7 +83,7 @@ const Navbar = () => {
 
   return (
     <Bar>
-      <Logo style={{ justifyContent: `flex-start`, marginBottom: `2rem` }}/>
+      <Logo style={{ justifyContent: `flex-start`, marginBottom: `1rem` }}/>
       <Toggle style={{ justifyContent: `center`, alignItems: `center` }} navbarOpen={navbarOpen}
               onClick={() => setNavbarOpen(!navbarOpen)}>
         {navbarOpen ? <Hamburger open/> : <Hamburger/>}

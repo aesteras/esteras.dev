@@ -9,7 +9,7 @@ const FooterP = ({ children }) => {
 }
 
 export default ({ children }) => (
-  <div style={{ maxWidth: `48rem`, margin: `2rem auto`, padding: `0 1rem` }}>
+  <div style={{ maxWidth: `48rem`, margin: `1rem auto`, padding: `0 1rem` }}>
     <SEO title={"esteras.dev"} description={"Personal website of Andreu Esteras."}/>
     <Navbar/>
     {children}

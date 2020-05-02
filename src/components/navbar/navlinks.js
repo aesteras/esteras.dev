@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const CustLink = props => (<Link to={props.to} style={{ marginRight: `1rem`, marginBottom: `2rem` }}>{props.children}</Link>)
+const CustLink = props => (<Link to={props.to} style={{ marginRight: `1rem`, marginBottom: `1rem` }}>{props.children}</Link>)
 
 const NavLinks = () => {
   return (
