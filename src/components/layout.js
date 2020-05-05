@@ -14,8 +14,7 @@ export default ({ children }) => (
     <Navbar/>
     {children}
     <div style={{ marginTop: `4rem` }}>
-      <FooterP>Andreu Esteras</FooterP>
-      <FooterP>2020</FooterP>
+      <FooterP>built in 2020 by Andreu Esteras</FooterP>
     </div>
   </div>
 )
